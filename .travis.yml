@@ -1,0 +1,19 @@
+language: python
+python:
+  - '3.7'
+install:
+  - pip3 install requests
+script:
+  - python3 run.py
+after_success:
+  - cd build/
+  - git config http.postBuffer 524288000
+  - git init; git add -- *; git commit --allow-empty-message -m ""
+  - git push -f -q https://gggxbbb:$GITHUB_PASS@github.com/gggxbbb/days.git master:gh-pages
+
+cache:
+  directories:
+    - build
+notifications:
+  email:
+    - 2331490629@qq.com
