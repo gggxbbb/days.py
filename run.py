@@ -92,3 +92,5 @@ with open('build/days.json', 'w', encoding='utf-8') as f:
 
 
 #getDay(200)
+
+print(f'http_count->{http_count}')
