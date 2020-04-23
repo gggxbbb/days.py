@@ -9,7 +9,7 @@ after_success:
   - cd build/
   - git config http.postBuffer 524288000
   - git init; git add -- *; git commit --allow-empty-message -m ""
-  - git push -f -q https://gggxbbb:$GITHUB_PASS@github.com/gggxbbb/days.git master:gh-pages
+  - git push -f -q https://gggxbbb:$GITHUB_PASS@github.com/gggxbbb/days_py.git master:gh-pages
 
 cache:
   directories:
