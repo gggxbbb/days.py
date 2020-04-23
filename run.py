@@ -65,7 +65,7 @@ days = {}
 def getDay(day:int):
     data = getJson(f'https://api.comm.miui.com/calendar/festival/v2/detail?id={day}')
     #print(data)
-    date = datetime.datetime.fromtimestamp(data['data']['second'])
+    date = datetime.datetime.fromtimestamp(data['data']['second']).replace(tzinfo=pytz.timezone('PRC'))
     date_str = date.strftime('%Y-%m-%d')
     name = data['data']['name']
     info = data['data']['description']
